@@ -1,11 +1,11 @@
 <script setup lang="ts">
+  import SectionComponent from './SectionComponent.vue';
+
   const names = ['Mario', 'Mirko', 'Matteo', 'Michele', 'Mimmo'];
 </script>
 
 <template>
-  <section class="component">
-    <h1>Cicles with FOR</h1>
-
+  <SectionComponent title="Cicles with FOR">
     <div class="names-container">
       <p v-for="(name, index) in names" :key="index">
         {{ name }}
@@ -14,5 +14,5 @@
         </span>
       </p>
     </div>
-  </section>
+  </SectionComponent>
 </template>
