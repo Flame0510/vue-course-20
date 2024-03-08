@@ -4,8 +4,15 @@
     text: String
   });
 
+  //DEFINIZIONE DELLE PROPS TRAMITE TIPO ESPLICITO
+  //const { text } = defineProps<{ text: string }>();
+
   //DEFINIAMO L'EMETTITORE
-  const emit = defineEmits(['button-click']);
+  const emit = defineEmits([
+    'button-click'
+    //E' POSSIBILE DEFINIRE PIU' EMIT DA UTILIZZARE
+    // 'emit-2', 'emit-3'
+  ]);
 
   //HANDLE CHIAMATO AL CLICK DEL BOTTONE - DOPO 5 SECONDI FA L'EMIT
   const handleClick = () => {

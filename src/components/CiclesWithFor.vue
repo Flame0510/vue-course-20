@@ -9,7 +9,7 @@
     <div class="names-container">
       <p v-for="(name, index) in names" :key="index">
         {{ name }}
-        <span v-if="name !== 'Mirko'" :class="{ mario: name === 'Mario' }">
+        <span v-if="name !== 'Mirko'" :class="[{ mario: name === 'Mario' }, name]">
           {{ index }}
         </span>
       </p>

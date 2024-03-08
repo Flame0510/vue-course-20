@@ -38,5 +38,7 @@
     <CustomInput v-model="inputValue" :value="inputValue" />
 
     <CustomButton class="primary" text="Aggiungi elemento" @click="handleAdd" />
+
+    <p>inputValue: {{ inputValue }}</p>
   </SectionComponent>
 </template>

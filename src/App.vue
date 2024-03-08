@@ -10,6 +10,7 @@
   import MountedUnMounted from './components/MountedUnMounted.vue';
   import CustomButton from './components/CustomButton.vue';
   import SectionComponent from './components/SectionComponent.vue';
+  import CardSection from './components/Card/CardSection.vue';
 
   const toggleMounted = ref<boolean>(true);
 </script>
@@ -39,9 +40,18 @@
         @button-click="console.log(toggleMounted)"
       />
     </SectionComponent>
+
+    <CardSection />
   </div>
 </template>
 
 <style scoped lang="scss">
   @import './scss/includes.scss';
-</style>
+
+  //UTILIZZO DI DEEP()
+  /* .components-container {
+    &:deep(.section-component) {
+      //STYLE
+    }
+  } */
+</style>./components/Card/CardSection.vue
