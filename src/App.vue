@@ -11,6 +11,9 @@
   import CustomButton from './components/CustomButton.vue';
   import SectionComponent from './components/SectionComponent.vue';
   import CardSection from './components/Card/CardSection.vue';
+  import WatcherComponent from './components/Watcher/WatcherComponent.vue';
+  import WatchEffectComponent from './components/Watcher/WatchEffectComponent.vue';
+  import FetchComponent from './components/FetchComponent.vue';
 
   const toggleMounted = ref<boolean>(true);
 </script>
@@ -41,7 +44,15 @@
       />
     </SectionComponent>
 
+    <!-- CARD -->
     <CardSection />
+
+    <!-- WATCHERS -->
+    <WatcherComponent />
+    <WatchEffectComponent />
+
+    <!-- FETCH -->
+    <FetchComponent />
   </div>
 </template>
 
@@ -54,4 +65,4 @@
       //STYLE
     }
   } */
-</style>./components/Card/CardSection.vue
+</style>
