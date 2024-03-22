@@ -2,3 +2,20 @@
 @import './_colors.scss';
 
 $transition: 0.3s all ease-in-out;
+
+//CLASSI GLOBALI PER IL COMPONENTE Transition. Transition.
+//RIFERIMENTO AL SEGUENTE LINK: "https://it.vuejs.org/guide/built-ins/transition.html#the-transition-component"
+.v-enter-active,
+.v-leave-active {
+  transition: $transition;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.v-enter-to,
+.v-leave-from {
+  opacity: 1;
+}

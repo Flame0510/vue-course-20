@@ -1,7 +1,9 @@
 <script setup lang="ts">
+  import { watchEffect } from 'vue';
   import SectionComponent from './SectionComponent.vue';
 
   import { useFetch } from '@/utils/fetch';
+  import { loader } from '../../store';
 
   //UTILIZZO DI FETCH (CLASSICO)
   /* const data = ref<[]>([]);
@@ -31,6 +33,9 @@
   const { isFetching, data, status, error } = useFetch(
     'https://jsonplaceholder.typicode.com/todos'
   );
+
+  //LOADER DINAMICO SULLO STATE
+  //watchEffect(() => loader.setLoading(isFetching.value));
 
   //UTILIZZO DI "useFetch" PRESO DALLA LIBRERIA "VueUse" (IL VALUE E' UN PARSED ARRAY [STRING])
   //const { isFetching, data, error } = await useFetch('https://jsonplaceholder.typicode.com/todos');
